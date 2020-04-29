@@ -40,7 +40,6 @@ class Home extends React.Component {
 
         window.navigator.geolocation.getCurrentPosition(
             (position) => {
-                console.log(position)
                 this.setState({
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude
