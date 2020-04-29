@@ -17,7 +17,8 @@ function buyCake() {
 
 function buyIceCream() {
     return {
-        type: BUY_ICECREAM
+        type: BUY_ICECREAM,
+        info: 'Buying Ice Cream'
     }
 }
 
@@ -55,9 +56,15 @@ const rootReducer = combineReducers({
     iceCream: iceCreamReducer
 })
 
-const store = createStore(rootReducer, applyMiddleware(logger))
-console.log('Initial State ', store.getState())
+const store = createStore(rootReducer)
+// const store = createStore(rootReducer, applyMiddleware(logger))
+// console.log('Initial State ', store.getState())
 const unsubscribe = store.subscribe(() => { })
+
+console.log('Initial State ', store.getState())
 
 store.dispatch(buyCake())
 console.log('First State ', store.getState())
+
+store.dispatch(buyIceCream())
+console.log('Second State ', store.getState())
