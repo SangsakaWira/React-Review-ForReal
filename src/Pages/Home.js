@@ -52,7 +52,7 @@ class Home extends React.Component {
         )
         return (
             <div>
-                <Navigation></Navigation>
+                <Navigation status="Home"></Navigation>
                 <Container style={{marginTop:"25px"}}>
                     <h1 style={{textAlign:"center"}}>Hello you are at Home Page</h1>
                 </Container>

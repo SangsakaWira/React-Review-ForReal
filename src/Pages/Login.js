@@ -44,7 +44,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <Navigation></Navigation>
+                <Navigation status="Login"></Navigation>
                 <Container style={{ marginTop: "15px" }}>
                     <h1 style={{ textAlign: "center" }}>Login Page</h1>
                     <Form>

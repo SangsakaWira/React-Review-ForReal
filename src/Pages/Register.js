@@ -31,7 +31,7 @@ class Register extends React.Component {
     render() {
         return (
             <div>
-                <Navigation></Navigation>
+                <Navigation status="Register"></Navigation>
                 <Container style={{ marginTop: "15px" }}>
                     <h1 style={{ textAlign: "center" }}>Register Page</h1>
                     <Form onClick={this.onClickHandler}>
