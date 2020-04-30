@@ -3,9 +3,9 @@ import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import Home from "./Home";
-import Login from "./Login";
-import Register from "./Register";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 
 class AppRouter extends React.Component{
     render(){

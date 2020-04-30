@@ -1,6 +1,6 @@
 import React from 'react';
 import { Spinner, Container, Form, Button } from 'react-bootstrap'
-import Navigation from './Navigation';
+import Navigation from '../Component/Navigation';
 
 class Home extends React.Component {
 
@@ -53,8 +53,8 @@ class Home extends React.Component {
         return (
             <div>
                 <Navigation></Navigation>
-                <Container>
-                    <h1>Hello you are at Home Page</h1>
+                <Container style={{marginTop:"25px"}}>
+                    <h1 style={{textAlign:"center"}}>Hello you are at Home Page</h1>
                 </Container>
             </div>
         )
