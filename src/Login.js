@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button,Form,Nav,Navbar,FormControl } from 'react-bootstrap'
+import { Button,Form,Nav,Navbar,FormControl,Container } from 'react-bootstrap'
 import Home from './Home';
 import axios from 'axios';
 import Navigation from './Navigation';
 
-class App extends React.Component {
+class Login extends React.Component {
 
     constructor(props) {
         super(props)
@@ -15,12 +15,12 @@ class App extends React.Component {
         this.onClickHandler = this.onClickHandler.bind(this)
     }
 
-    async componentDidMount(){
-        let data = await axios.get("http://covid-dashboard-its.id:4500/pasienCovid/findAllPasien").then(response=>{
-            return response
-        })
-        console.log(data.data)
-    }
+    // async componentDidMount(){
+    //     let data = await axios.get("http://covid-dashboard-its.id:4500/pasienCovid/findAllPasien").then(response=>{
+    //         return response
+    //     })
+    //     console.log(data.data)
+    // }
 
     onClickHandler() {
         if (this.state.counter === 0) {
@@ -38,11 +38,13 @@ class App extends React.Component {
         return (
             <div>
                 <Navigation></Navigation>
-                <Home></Home>
+                <Container>
+                    <h1 style={{textAlign:"center"}}>Login Page</h1>
+                </Container>
             </div>
         )
     }
 }
 
-export default App;
+export default Login;
 

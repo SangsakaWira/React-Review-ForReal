@@ -1,5 +1,6 @@
 import React from 'react';
 import { Spinner, Container, Form, Button } from 'react-bootstrap'
+import Navigation from './Navigation';
 
 class Home extends React.Component {
 
@@ -50,30 +51,12 @@ class Home extends React.Component {
             }
         )
         return (
-            <Container>
-                <br></br>
-                <h1 style={{ textAlign: "center" }}>Form Registration</h1>
-                <Form onSubmit={this.onSubmit}>
-                <Form.Group controlId="formBasicName">
-                        <Form.Label>Username</Form.Label>
-                        <Form.Control name="username" onChange={this.onHandleChange} type="username" placeholder="Enter username" />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control name="email" onChange={this.onHandleChange} type="email" placeholder="Enter email" />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control name="password" onChange={this.onHandleChange} type="password" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check name="checkout" onChange={this.onHandleChange} type="checkbox" label="Check me out" />
-                    </Form.Group>
-                    <Button variant="primary" type="submit" >
-                        Submit
-                    </Button>
-                </Form>
-            </Container>
+            <div>
+                <Navigation></Navigation>
+                <Container>
+                    <h1>Hello you are at Home Page</h1>
+                </Container>
+            </div>
         )
     }
 }
